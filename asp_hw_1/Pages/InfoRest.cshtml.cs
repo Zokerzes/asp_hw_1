@@ -33,14 +33,25 @@ namespace asp_hw_1.Pages
 
         public Dictionary<string, string> RestDefault = new Dictionary<string, string>();
         public string restName ="", restStars = "", restKithenType ="";
+        public int restSelect { get; set; } = 0;
+        public int restCount = 1;
+
+		public void RestSel(int num)
+        {
+            restSelect = num;
+        }
 
         public void OnGet()
         {
-            RestDefault = Restaurants[0];
+            restCount = Restaurants.Count;
+			RestDefault = Restaurants[restSelect];
             restName = RestDefault.GetValueOrDefault("restName").ToString();
             restStars = RestDefault.GetValueOrDefault("restStars").ToString();
             restKithenType = RestDefault.GetValueOrDefault("restKithenType").ToString();
-
         }
-    }
+		public IActionResult OnPost()
+		{
+			return Page("/InfoRest");
+		}
+	}
 }

@@ -8,3 +8,14 @@
 <h2 class="gy-2"><span class="alert-primary">Название: </span>@Model.restName</h2>
 <h2 class="gy-2"><span class="alert-primary">Рейтинг: </span>@Model.restStars</h2>
 <h2 class="gy-2"><span class="alert-primary">Кухня: </span>@Model.restKithenType</h2>
+
+<h1 class="text-primary">Задание 4</h1>
+<h2>Список ресторанов</h2>
+
+@for(int i = 0; i<Model.Restaurants.Count; i++)
+{
+	<li class="display-5">
+		<button class="btn btn-primary" type="submit" asp-action="@Model.restSelect = i">@Model.Restaurants[i].GetValueOrDefault("restName").ToString()</button>
+	</li>
+	
+}
