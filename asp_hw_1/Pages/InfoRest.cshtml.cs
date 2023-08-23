@@ -49,9 +49,9 @@ namespace asp_hw_1.Pages
             restStars = RestDefault.GetValueOrDefault("restStars").ToString();
             restKithenType = RestDefault.GetValueOrDefault("restKithenType").ToString();
         }
-		public IActionResult OnPost()
-		{
-			return Page("/InfoRest");
-		}
+		//public IActionResult OnPost()
+		//{
+		//	return Page("/InfoRest");
+		//}
 	}
 }
