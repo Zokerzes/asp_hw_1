@@ -9,6 +9,7 @@ namespace asp_hw_1.Pages
         public string? letter;
        
         char[] letters = Enumerable.Range('a', 'z' - 'a' + 1).Select(c => (char)c).ToArray();
+
         public IndexModel()
         {
             
