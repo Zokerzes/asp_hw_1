@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="text-primary">Задание 1</h1>
+    <h2>Сегодня:</h2>
+    <h3>@DateTime.Now.ToString("dd MMMM yyyy") </h3>
+    <h2>Номер текущего дня в году: </h2>
+    <h3 class="text-info">@DateTime.Now.DayOfYear </h3>
+    
+    <h1 class="text-primary">Задание 2</h1>
+    <h2>Случайная буква из английского алфавита</h2>
+    <h3 class="text-info">@Model.letter</h3>
+
+</div>
